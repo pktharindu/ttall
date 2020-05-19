@@ -1,0 +1,12 @@
+parameters:
+
+    paths:
+        - src
+
+    # The level 8 is the highest level
+    level: 5
+
+    ignoreErrors:
+        # - '#Function base_path not found.#'
+
+    checkMissingIterableValueType: false

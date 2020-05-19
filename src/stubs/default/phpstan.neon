@@ -1,0 +1,19 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+
+    paths:
+        - app
+
+    # The level 8 is the highest level
+    level: 5
+
+    ignoreErrors:
+        - '#Unsafe usage of new static#'
+        - '#Access to an undefined property Illuminate\\Support\\HigherOrderCollectionProxy::\$[a-zA-Z0-9_]+#'
+
+    excludes_analyse:
+        - ./app/Http/Middleware/Authenticate.php
+
+    checkMissingIterableValueType: false

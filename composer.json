@@ -1,0 +1,49 @@
+{
+    "name": "laravel-frontend-presets/ttall",
+    "description": "TTALL Preset For Laravel 7 and Up.",
+    "keywords": [
+        "tailwind",
+        "tailwindcss",
+        "turbolinks",
+        "alpine",
+        "alpinejs",
+        "laravel",
+        "livewire",
+        "tall",
+        "ttall",
+        "preset"
+    ],
+    "license": "MIT",
+    "authors": [{
+            "name": "P. K. Tharindu",
+            "email": "pktharindu@outlook.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5",
+        "laravel/framework": "^7.0",
+        "laravel/ui": "^2.0",
+        "livewire/livewire": "^1.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.12.14",
+        "friendsofphp/php-cs-fixer": "^2.16"
+    },
+    "scripts": {
+        "format": "php-cs-fixer fix --path-mode=intersection --config=.php_cs ./",
+        "analyse": "phpstan analyse"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelFrontendPresets\\TtallPreset\\": "src/"
+        }
+    },
+    "extra": {
+      "laravel": {
+        "providers": [
+          "LaravelFrontendPresets\\TtallPreset\\TtallPresetServiceProvider"
+       ]
+      }
+    }
+
+}
