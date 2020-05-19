@@ -36,7 +36,7 @@ jobs:
         cd ../app
         composer require livewire/livewire
         composer config repositories.local '{"type": "path", "url": "../ttall"}' --file composer.json
-        composer require laravel-frontend-presets/ttall dev-master
+        composer require laravel-frontend-presets/ttall @dev
     - name: Install preset
       run: |
         cd ../app
