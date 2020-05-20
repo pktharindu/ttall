@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](/LICENSE)
 ![tests](https://github.com/pktharindu/ttall/workflows/tests/badge.svg)
 
-An opiniated Laravel front-end scaffolding preset for TTALL stack - Taiwlindcss | Turbolinks | Alpine.js | Laravel | Livewire 🚀
+An opiniated Laravel front-end scaffolding preset for TTALL stack - Tailwindcss | Turbolinks | Alpine.js | Laravel | Livewire 🚀
 
 It comes bundled with helpful packages and their configurations (optional):
 
