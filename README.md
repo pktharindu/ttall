@@ -5,7 +5,7 @@
 
 An opiniated Laravel front-end scaffolding preset for TTALL stack - Taiwlindcss | Turbolinks | Alpine.js | Laravel | Livewire 🚀
 
-It comes bundled with helpful packages and their configurations:
+It comes bundled with helpful packages and their configurations (optional):
 
 - Laravel debugbar
 - Laravel IDE Helper
@@ -26,8 +26,10 @@ If you like this package, show some love by starring the repo. ⭐❤
   - [Installation](#installation)
     - [For Basic Presets (without authentication)](#for-basic-presets-without-authentication)
     - [For Presets with Authentication](#for-presets-with-authentication)
-    - [Configuration](#configuration)
-    - [Scripts](#scripts)
+  - [Configuration](#configuration)
+  - [Options](#options)
+    - [Code Helpers](#code-helpers)
+      - [Scripts](#scripts)
   - [Support](#support)
   - [Credits](#credits)
   - [License](#license)
@@ -56,7 +58,7 @@ php artisan ui ttall --auth
 ```
 Finally run `composer update && npm install && npm run dev` to install the new composer packages and compile your fresh scaffolding.
 
-### Configuration
+## Configuration
 
 Add a new i18n string in the `resources/lang/XX/pagination.php` file for each language that your app uses:
 
@@ -76,7 +78,29 @@ This will help with accessibility.
 </li>
 ```
 
-### Scripts
+## Options
+
+As this preset is designed to get you up-and-running quickly, it comes bundled with some extra options that will take you even further. To utilize these options, use the `--option` flag when installing the preset.
+
+Usage Example:
+
+```bash
+php artisan ui ttall --option=code-helpers
+```
+
+### Code Helpers
+
+`code-helpers` option will install and configure the below packages to help you with the development:
+
+- Laravel debugbar
+- Laravel IDE Helper
+- Php CS Fixer
+- Larastan
+- Eslint (Airbnb rules)
+- Prettier
+- Composer Git Hooks
+
+#### Scripts
 
 A composer's script is added automatically to tell `Laravel IDE Helper` to rescan your `Facades` files and update git hooks after every `composer update` :
 

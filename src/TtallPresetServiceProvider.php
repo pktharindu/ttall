@@ -37,9 +37,17 @@ EOT;
                 $command->info('Ttall auth scaffolding installed successfully.');
             }
 
+            $options = $command->option('option') ?? [];
+
+            if (in_array('code-helpers', $options, true) || in_array('all', $options, true)) {
+                TtallPreset::installCodeHelpers();
+
+                $command->info('Code helpers installed successfully.');
+            }
+
             $command->line('Please run "composer update && npm install && npm run dev" to install the new composer\'s packages and compile your fresh scaffolding.');
 
-            if ($command->confirm('Would you like to show some love by starring the repo? 🥺')) {
+            if ($command->confirm('Would you like to show some love by starring the repo?')) {
                 if (PHP_OS_FAMILY == 'Darwin') {
                     exec('open https://github.com/laravel-frontend-presets/ttall');
                 }

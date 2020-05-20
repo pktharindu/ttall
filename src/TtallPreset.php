@@ -46,7 +46,6 @@ class TtallPreset extends Preset
         static::updateComposerPackages(false);
         static::updatePackagesScripts();
         static::scaffoldDefaults();
-        static::installCodeHelpers();
     }
 
     public static function installAuth(): void
