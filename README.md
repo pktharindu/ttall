@@ -15,7 +15,7 @@ It comes bundled with helpful packages and their configurations (optional):
 - Prettier
 - Composer Git Hooks
 
-![Screen Record](/screenshots/screen-record.gif)
+![Screen Record](https://raw.githubusercontent.com/pktharindu/ttall/master/screenshots/screen-record.gif)
 
 If you like this package, show some love by starring the repo. ⭐❤
 
