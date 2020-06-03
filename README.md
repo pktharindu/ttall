@@ -40,7 +40,7 @@ If you like this package, show some love by starring the repo. ⭐❤
 To install this preset on your laravel application, run:
 
 ``` bash
-composer require laravel-frontend-presets/ttall --dev
+composer require pktharindu/ttall --dev
 ```
 
 ### For Basic Presets (without authentication)
@@ -146,7 +146,7 @@ If you require any support please contact me on [Twitter](https://twitter.com/Ca
 - [P. K. Tharindu](https://github.com/pktharindu)
 - [All Contributors](../../contributors)
 
-This Package is inspired by [laravel-frontend-presets/tall](https://github.com/laravel-frontend-presets/tall) and [YannickYayo/laravel-preset-ttall](https://github.com/YannickYayo/laravel-preset-ttall). I wanted to have a combination of both. Thanks to all authors of these packages.
+This Package is inspired by [pktharindu/tall](https://github.com/pktharindu/tall) and [YannickYayo/laravel-preset-ttall](https://github.com/YannickYayo/laravel-preset-ttall). I wanted to have a combination of both. Thanks to all authors of these packages.
 
 ## License
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelFrontendPresets\TtallPreset;
+namespace Pktharindu\TtallPreset;
 
 trait HandlesCodeHelperScaffolding
 {

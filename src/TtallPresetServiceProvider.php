@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelFrontendPresets\TtallPreset;
+namespace Pktharindu\TtallPreset;
 
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
@@ -49,13 +49,13 @@ EOT;
 
             if ($command->confirm('Would you like to show some love by starring the repo?')) {
                 if (PHP_OS_FAMILY == 'Darwin') {
-                    exec('open https://github.com/laravel-frontend-presets/ttall');
+                    exec('open https://github.com/pktharindu/ttall');
                 }
                 if (PHP_OS_FAMILY == 'Windows') {
-                    exec('start https://github.com/laravel-frontend-presets/ttall');
+                    exec('start https://github.com/pktharindu/ttall');
                 }
                 if (PHP_OS_FAMILY == 'Linux') {
-                    exec('xdg-open https://github.com/laravel-frontend-presets/ttall');
+                    exec('xdg-open https://github.com/pktharindu/ttall');
                 }
 
                 $command->line('Thanks! Means the world to me! 🥰');

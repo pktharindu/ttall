@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelFrontendPresets\TtallPreset;
+namespace Pktharindu\TtallPreset;
 
 use Illuminate\Support\Arr;
 use Laravel\Ui\Presets\Preset;

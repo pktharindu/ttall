@@ -1,5 +1,5 @@
 {
-    "name": "laravel-frontend-presets/ttall",
+    "name": "pktharindu/ttall",
     "description": "TTALL Preset For Laravel 7 and Up.",
     "keywords": [
         "tailwind",
@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "LaravelFrontendPresets\\TtallPreset\\": "src/"
+            "Pktharindu\\TtallPreset\\": "src/"
         }
     },
     "extra": {
       "laravel": {
         "providers": [
-          "LaravelFrontendPresets\\TtallPreset\\TtallPresetServiceProvider"
+          "Pktharindu\\TtallPreset\\TtallPresetServiceProvider"
        ]
       }
     },
