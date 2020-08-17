@@ -31,7 +31,7 @@ class Register extends Component
 
         $this->guard()->login($user);
 
-        redirect(RouteServiceProvider::HOME);
+        return redirect()->intended(RouteServiceProvider::HOME);
     }
 
     protected function create()

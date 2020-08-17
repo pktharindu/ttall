@@ -31,11 +31,11 @@ trait HandlesCodeHelperScaffolding
     {
         if ($dev == 'require-dev') {
             return array_merge([
-                'barryvdh/laravel-debugbar' => '^3.2',
-                'barryvdh/laravel-ide-helper' => '^2.6',
+                'barryvdh/laravel-debugbar' => '^3.4',
+                'barryvdh/laravel-ide-helper' => '^2.8',
                 'brainmaestro/composer-git-hooks' => '^2.8',
                 'friendsofphp/php-cs-fixer' => '^2.16',
-                'nunomaduro/larastan' => '^0.5.2',
+                'nunomaduro/larastan' => '^0.6.2',
             ], $composer);
         } else {
             return array_merge([], $composer);
@@ -132,7 +132,6 @@ trait HandlesCodeHelperScaffolding
                 'php-cs-fixer fix',
                 'git add $STAGED_FILES',
             ],
-            'post-merge' => 'composer install',
         ], $composer);
     }
 }
