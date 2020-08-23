@@ -42,4 +42,4 @@ jobs:
     - name: Execute tests
       run: |
         cd ../app
-        vendor/bin/phpunit --verbose
+        php artisan test
