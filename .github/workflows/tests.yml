@@ -32,13 +32,13 @@ jobs:
     - name: Install dependencies
       run: |
         cd ../app
-        composer require livewire/livewire
         composer config repositories.local '{"type": "path", "url": "../ttall"}' --file composer.json
         composer require pktharindu/ttall @dev
+        composer update
     - name: Install preset
       run: |
         cd ../app
-        php artisan ui ttall --auth
+        php artisan ui ttall --auth --option=code-helpers
     - name: Execute tests
       run: |
         cd ../app
