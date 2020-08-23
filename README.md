@@ -6,7 +6,7 @@
 
 An opiniated Laravel front-end scaffolding preset for TTALL stack - Tailwindcss | Turbolinks | Alpine.js | Laravel | Livewire 🚀
 
-It comes bundled with helpful packages and their configurations (optional):
+It comes bundled with some helpful packages and their configurations (optional):
 
 - Laravel debugbar
 - Laravel IDE Helper
