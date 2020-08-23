@@ -1,7 +1,8 @@
 # TTALL Preset For Laravel 7 and Up
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](/LICENSE)
-![tests](https://github.com/pktharindu/ttall/workflows/tests/badge.svg)
+[![CI Status](https://github.com/pktharindu/ttall/workflows/tests/badge.svg)](https://github.com/pktharindu/ttall/actions)
+[![Total Downloads](https://poser.pugx.org/pktharindu/ttall/d/total.svg)](https://packagist.org/packages/pktharindu/ttall)
 
 An opiniated Laravel front-end scaffolding preset for TTALL stack - Tailwindcss | Turbolinks | Alpine.js | Laravel | Livewire 🚀
 
