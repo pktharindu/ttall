@@ -43,7 +43,7 @@ jobs:
       run: |
         cd ../app
         rm phpunit.xml
-        cp ../tall/.github/workflows/phpunit.xml.stub ./phpunit.xml
+        cp ../ttall/.github/workflows/phpunit.xml.stub ./phpunit.xml
     - name: Execute tests
       run: |
         cd ../app
