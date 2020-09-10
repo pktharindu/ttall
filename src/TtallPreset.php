@@ -13,7 +13,7 @@ class TtallPreset extends Preset
 
     const NPM_PACKAGES_TO_ADD = [
         '@tailwindcss/ui' => '^0.4',
-        'alpinejs' => '^2.2',
+        'alpinejs' => '^2.6',
         'laravel-mix' => '^5.0.1',
         'laravel-mix-tailwind' => '^0.1.0',
         'tailwindcss' => '^1.6',

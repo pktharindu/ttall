@@ -10,8 +10,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php: [7.2, 7.3, 7.4]
-        laravel: [^7.0]
+        php: [7.3, 7.4]
+        laravel: [^8.0]
     name: PHP ${{ matrix.php }} - Laravel ${{ matrix.laravel }}
     steps:
     - name: Checkout code
@@ -39,6 +39,11 @@ jobs:
       run: |
         cd ../app
         php artisan ui ttall --auth --option=code-helpers
+    - name: Overwrite configuration
+      run: |
+        cd ../app
+        rm phpunit.xml
+        cp ../ttall/.github/workflows/phpunit.xml.stub ./phpunit.xml
     - name: Execute tests
       run: |
         cd ../app

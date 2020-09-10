@@ -3,7 +3,7 @@
 namespace Tests\Feature\Auth;
 
 use App\Providers\RouteServiceProvider;
-use App\User;
+use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Auth;
@@ -26,7 +26,7 @@ class RegisterTest extends TestCase
     /** @test */
     public function is_redirected_if_already_logged_in()
     {
-        $user = factory(User::class)->create();
+        $user = User::factory()->create();
 
         $this->be($user);
 
@@ -83,7 +83,7 @@ class RegisterTest extends TestCase
     /** @test */
     public function email_hasnt_been_taken_already()
     {
-        factory(User::class)->create(['email' => 'tallstack@example.com']);
+        User::factory()->create(['email' => 'tallstack@example.com']);
 
         Livewire::test('auth.register')
             ->set('email', 'tallstack@example.com')
@@ -94,7 +94,7 @@ class RegisterTest extends TestCase
     /** @test */
     public function see_email_hasnt_already_been_taken_validation_message_as_user_types()
     {
-        factory(User::class)->create(['email' => 'tallstack@example.com']);
+        User::factory()->create(['email' => 'tallstack@example.com']);
 
         Livewire::test('auth.register')
             ->set('email', 'smallstack@gmail.com')

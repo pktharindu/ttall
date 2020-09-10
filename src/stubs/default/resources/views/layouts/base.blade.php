@@ -24,6 +24,12 @@
     @livewireStyles
     @stack('after-styles')
 
+    <!-- Scripts -->
+    <script src="{{ url(mix('js/app.js')) }}" defer></script>
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <!-- Turbolinks -->
     <script src="{{ mix('js/turbolinks.js') }}"></script>
 </head>
@@ -31,10 +37,7 @@
 <body>
     @yield('body')
 
-    @stack('before-scripts')
     @livewireScripts
-    <script src="{{ mix('js/app.js') }}"></script>
-    @stack('after-scripts')
 </body>
 
 </html>
