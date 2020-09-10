@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Home;
 use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Auth\Verify;
 use App\Http\Livewire\Auth\Register;
@@ -47,7 +48,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('home', 'home')
+    Route::get('home', Home::class)
         ->name('home');
 
     Route::get('email/verify/{id}/{hash}', [VerificationController::class, 'verify'])
