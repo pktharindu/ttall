@@ -4,9 +4,11 @@
 [![CI Status](https://github.com/pktharindu/ttall/workflows/tests/badge.svg)](https://github.com/pktharindu/ttall/actions)
 [![Total Downloads](https://poser.pugx.org/pktharindu/ttall/d/total.svg)](https://packagist.org/packages/pktharindu/ttall)
 
-An opiniated Laravel front-end scaffolding preset for TTALL stack - Tailwindcss | Turbolinks | Alpine.js | Laravel | Livewire 🚀
+An opinionated Laravel front-end scaffolding preset for TTALL stack - Tailwindcss | Turbolinks | Alpine.js | Laravel | Livewire 🚀
 
 It comes bundled with some helpful packages and their configurations (optional):
+
+It uses concerns of [laravel/ui](https://github.com/laravel/ui) through Livewire actions. So, security features of laravel/ui (ex: login throttling) are built right in. It also comes bundled with some helpful packages and their configurations (optional):
 
 - Laravel debugbar
 - Laravel IDE Helper
