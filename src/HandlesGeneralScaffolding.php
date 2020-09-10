@@ -36,7 +36,7 @@ trait HandlesGeneralScaffolding
         } else {
             return array_merge([
                 'laravel/ui' => '^2.0',
-                'livewire/livewire' => '^1.0',
+                'livewire/livewire' => '^2.0',
             ], $composer);
         }
     }
