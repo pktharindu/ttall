@@ -25,7 +25,7 @@ trait HandlesGeneralScaffolding
 
         file_put_contents(
             base_path('composer.json'),
-            json_encode($composer, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT).PHP_EOL
+            json_encode($composer, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . PHP_EOL
         );
     }
 
@@ -33,12 +33,12 @@ trait HandlesGeneralScaffolding
     {
         if ($dev == 'require-dev') {
             return array_merge([], $composer);
-        } else {
-            return array_merge([
-                'laravel/ui' => '^2.0',
+        }
+
+        return array_merge([
+                'laravel/ui' => '^3.0',
                 'livewire/livewire' => '^2.0',
             ], $composer);
-        }
     }
 
     protected static function updatePackagesScripts(): void
@@ -53,7 +53,7 @@ trait HandlesGeneralScaffolding
 
         file_put_contents(
             base_path('package.json'),
-            json_encode($packages, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT).PHP_EOL
+            json_encode($packages, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . PHP_EOL
         );
     }
 
@@ -61,6 +61,6 @@ trait HandlesGeneralScaffolding
     {
         $filesystem = new Filesystem();
 
-        $filesystem->copyDirectory(__DIR__.'/stubs/default', base_path());
+        $filesystem->copyDirectory(__DIR__ . '/stubs/default', base_path());
     }
 }
