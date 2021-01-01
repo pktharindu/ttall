@@ -12,7 +12,6 @@ class TtallPreset extends Preset
     use HandlesCodeHelperScaffolding;
 
     const NPM_PACKAGES_TO_ADD = [
-        '@tailwindcss/ui' => '^0.7.2',
         'autoprefixer' => '^9.8.6',
         'alpinejs' => '^2.6',
         'laravel-mix' => '^5.0.9',
