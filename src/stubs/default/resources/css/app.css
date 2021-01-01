@@ -7,22 +7,15 @@
  */
 @tailwind base;
 
+/**
+ * Remove the default box-shadow for invalid elements to prevent
+ * inputs in Livewire components showing with a
+ * red border by default in Firefox.
+ *
+ * See: https://github.com/laravel-frontend-presets/tall/issues/7
+ */
 input:invalid, textarea:invalid, select:invalid {
     box-shadow: none;
-}
-
-/**
- * x-cloak attributes are removed from elements when Alpine initializes.
- * This is useful for hiding pre-initialized DOM.
- *
- * See: https://github.com/alpinejs/alpine#x-cloak
- */
-[x-cloak] {
-    display: none !important;
-}
-
-.turbolinks-progress-bar {
-    @apply bg-indigo-500;
 }
 
 /**
@@ -41,6 +34,10 @@ input:invalid, textarea:invalid, select:invalid {
  * .form-input { ... }
  */
 
+.turbolinks-progress-bar {
+    @apply bg-indigo-500;
+}
+
 /**
  * This injects all of Tailwind's utility classes, generated based on your
  * config file.
@@ -56,3 +53,13 @@ input:invalid, textarea:invalid, select:invalid {
  * .bg-pattern-graph-paper { ... }
  * .skew-45 { ... }
  */
+
+ /**
+ * x-cloak attributes are removed from elements when Alpine initializes.
+ * This is useful for hiding pre-initialized DOM.
+ *
+ * See: https://github.com/alpinejs/alpine#x-cloak
+ */
+[x-cloak] {
+    display: none !important;
+}

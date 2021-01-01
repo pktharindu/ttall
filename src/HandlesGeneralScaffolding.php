@@ -25,7 +25,7 @@ trait HandlesGeneralScaffolding
 
         file_put_contents(
             base_path('composer.json'),
-            json_encode($composer, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . PHP_EOL
+            json_encode($composer, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT).PHP_EOL
         );
     }
 
@@ -41,26 +41,10 @@ trait HandlesGeneralScaffolding
             ], $composer);
     }
 
-    protected static function updatePackagesScripts(): void
-    {
-        if (! file_exists(base_path('package.json'))) {
-            return;
-        }
-
-        $packages = json_decode(file_get_contents(base_path('package.json')), true);
-
-        ksort($packages['scripts']);
-
-        file_put_contents(
-            base_path('package.json'),
-            json_encode($packages, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . PHP_EOL
-        );
-    }
-
     protected static function scaffoldDefaults(): void
     {
         $filesystem = new Filesystem();
 
-        $filesystem->copyDirectory(__DIR__ . '/stubs/default', base_path());
+        $filesystem->copyDirectory(__DIR__.'/stubs/default', base_path());
     }
 }
