@@ -12,12 +12,11 @@ class TtallPreset extends Preset
     use HandlesCodeHelperScaffolding;
 
     const NPM_PACKAGES_TO_ADD = [
-        'autoprefixer' => '^9.8.6',
-        'alpinejs' => '^2.6',
-        'laravel-mix' => '^5.0.9',
-        'postcss' => '^7.0.35',
+        'autoprefixer' => '^10.1.0',
+        'alpinejs' => '^2.8',
+        'postcss' => '^8.2.1',
         'postcss-import' => '^12.0.1',
-        'tailwindcss' => 'npm:@tailwindcss/postcss7-compat@^2.0.1',
+        'tailwindcss' => '^2.0.2',
         'turbolinks' => '^5.2.0',
     ];
 
@@ -30,12 +29,29 @@ class TtallPreset extends Preset
         'eslint-plugin-react' => '^7.20.6',
         'eslint-plugin-react-hooks' => '^4.1.0',
         'prettier' => '^2.0.5',
+        'laravel-mix' => '^6.0.0',
     ];
 
     const NPM_PACKAGES_TO_REMOVE = [
         'axios',
         'laravel-mix',
         'lodash',
+    ];
+
+    const SCRIPTS_TO_ADD = [
+        'development' => 'mix',
+        'watch' => 'mix watch',
+        'watch-poll' => 'mix watch -- --watch-options-poll=1000',
+        'hot' => 'mix watch --hot',
+        'production' => 'mix --production',
+    ];
+
+    const SCRIPTS_TO_REMOVE = [
+        'development',
+        'watch',
+        'watch-poll',
+        'hot',
+        'production',
     ];
 
     public static function install(): void
@@ -76,6 +92,27 @@ class TtallPreset extends Preset
         return array_merge(
             static::NPM_PACKAGES_TO_ADD,
             Arr::except($packages, static::NPM_PACKAGES_TO_REMOVE)
+        );
+    }
+
+    protected static function updatePackagesScripts(): void
+    {
+        if (! file_exists(base_path('package.json'))) {
+            return;
+        }
+
+        $packages = json_decode(file_get_contents(base_path('package.json')), true);
+
+        $packages['scripts'] = array_merge(
+            static::SCRIPTS_TO_ADD,
+            Arr::except($packages['scripts'], static::SCRIPTS_TO_REMOVE)
+        );
+
+        ksort($packages['scripts']);
+
+        file_put_contents(
+            base_path('package.json'),
+            json_encode($packages, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT).PHP_EOL
         );
     }
 }

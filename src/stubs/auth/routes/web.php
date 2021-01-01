@@ -1,15 +1,15 @@
 <?php
 
-use App\Http\Livewire\Home;
-use App\Http\Livewire\Auth\Login;
-use App\Http\Livewire\Auth\Verify;
-use App\Http\Livewire\Auth\Register;
-use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\Auth\Passwords\Email;
-use App\Http\Livewire\Auth\Passwords\Reset;
-use App\Http\Livewire\Auth\Passwords\Confirm;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\VerificationController;
+use App\Http\Livewire\Auth\Login;
+use App\Http\Livewire\Auth\Passwords\Confirm;
+use App\Http\Livewire\Auth\Passwords\Email;
+use App\Http\Livewire\Auth\Passwords\Reset;
+use App\Http\Livewire\Auth\Register;
+use App\Http\Livewire\Auth\Verify;
+use App\Http\Livewire\Home;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------

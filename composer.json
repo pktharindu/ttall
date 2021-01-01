@@ -20,9 +20,9 @@
         }
     ],
     "require": {
-        "php": "^7.2.5",
+        "php": "^7.2.5|^8.0",
         "laravel/framework": "^8.0",
-        "laravel/ui": "^2.0",
+        "laravel/ui": "^3.0",
         "livewire/livewire": "^2.0"
     },
     "require-dev": {
