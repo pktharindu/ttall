@@ -38,22 +38,6 @@ class TtallPreset extends Preset
         'lodash',
     ];
 
-    const SCRIPTS_TO_ADD = [
-        'development' => 'mix',
-        'watch' => 'mix watch',
-        'watch-poll' => 'mix watch -- --watch-options-poll=1000',
-        'hot' => 'mix watch --hot',
-        'production' => 'mix --production',
-    ];
-
-    const SCRIPTS_TO_REMOVE = [
-        'development',
-        'watch',
-        'watch-poll',
-        'hot',
-        'production',
-    ];
-
     public static function install(): void
     {
         static::updatePackages();
@@ -92,27 +76,6 @@ class TtallPreset extends Preset
         return array_merge(
             static::NPM_PACKAGES_TO_ADD,
             Arr::except($packages, static::NPM_PACKAGES_TO_REMOVE)
-        );
-    }
-
-    protected static function updatePackagesScripts(): void
-    {
-        if (! file_exists(base_path('package.json'))) {
-            return;
-        }
-
-        $packages = json_decode(file_get_contents(base_path('package.json')), true);
-
-        $packages['scripts'] = array_merge(
-            static::SCRIPTS_TO_ADD,
-            Arr::except($packages['scripts'], static::SCRIPTS_TO_REMOVE)
-        );
-
-        ksort($packages['scripts']);
-
-        file_put_contents(
-            base_path('package.json'),
-            json_encode($packages, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT).PHP_EOL
         );
     }
 }
