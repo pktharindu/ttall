@@ -130,7 +130,7 @@ trait HandlesCodeHelperScaffolding
             'pre-commit' => [
                 "STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM -- '*.php')",
                 './vendor/bin/php-cs-fixer fix',
-                "git add $STAGED_FILES",
+                'git add $STAGED_FILES',
             ],
         ], $composer);
     }
