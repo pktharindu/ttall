@@ -37,13 +37,13 @@ trait HandlesGeneralScaffolding
 
         return array_merge([
                 'laravel/ui' => '^3.0',
-                'livewire/livewire' => '^2.0',
+                'livewire/livewire' => '^2.6',
             ], $composer);
     }
 
     protected static function updatePackagesScripts(): void
     {
-        if (!file_exists(base_path('package.json'))) {
+        if (! file_exists(base_path('package.json'))) {
             return;
         }
 
@@ -53,7 +53,7 @@ trait HandlesGeneralScaffolding
 
         file_put_contents(
             base_path('package.json'),
-            json_encode($packages, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . PHP_EOL
+            json_encode($packages, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT).PHP_EOL
         );
     }
 

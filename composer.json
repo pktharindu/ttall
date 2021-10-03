@@ -30,7 +30,7 @@
         "friendsofphp/php-cs-fixer": "^2.16"
     },
     "scripts": {
-        "format": "php-cs-fixer fix --path-mode=intersection --config=.php_cs ./",
+        "format": "php-cs-fixer fix --path-mode=intersection --config=.php-cs-fixer.php ./",
         "analyse": "phpstan analyse"
     },
     "autoload": {
