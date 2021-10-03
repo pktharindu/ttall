@@ -31,10 +31,10 @@ trait HandlesCodeHelperScaffolding
     {
         if ($dev == 'require-dev') {
             return array_merge([
-                'barryvdh/laravel-debugbar' => '^3.4',
-                'barryvdh/laravel-ide-helper' => '^2.8',
+                'barryvdh/laravel-debugbar' => '^3.6',
+                'barryvdh/laravel-ide-helper' => '^2.10',
                 'brainmaestro/composer-git-hooks' => '^2.8',
-                'friendsofphp/php-cs-fixer' => '^2.16',
+                'friendsofphp/php-cs-fixer' => '^3.0',
                 'nunomaduro/larastan' => '^0.6.2',
             ], $composer);
         } else {
@@ -98,7 +98,7 @@ trait HandlesCodeHelperScaffolding
                 '@php artisan ide-helper:generate',
                 'cghooks update',
             ],
-            'format' => 'php-cs-fixer fix --path-mode=intersection --config=.php_cs ./',
+            'format' => 'php-cs-fixer fix --path-mode=intersection --config=.php-cs-fixer.php ./',
             'test' => '@php artisan test',
             'analyse' => 'phpstan analyse',
         ], $composer);
@@ -129,7 +129,7 @@ trait HandlesCodeHelperScaffolding
         return array_merge([
             'pre-commit' => [
                 "STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM -- '*.php')",
-                'php-cs-fixer fix',
+                './vendor/bin/php-cs-fixer fix',
                 'git add $STAGED_FILES',
             ],
         ], $composer);

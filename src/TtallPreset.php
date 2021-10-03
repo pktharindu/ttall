@@ -11,16 +11,16 @@ class TtallPreset extends Preset
     use HandlesGeneralScaffolding;
     use HandlesCodeHelperScaffolding;
 
-    const NPM_PACKAGES_TO_ADD = [
-        'autoprefixer' => '^10.1.0',
-        'alpinejs' => '^2.8',
+    public const NPM_PACKAGES_TO_ADD = [
+        'autoprefixer' => '^10.3.4',
+        'alpinejs' => '^3.3.5',
         'postcss' => '^8.2.1',
         'postcss-import' => '^12.0.1',
-        'tailwindcss' => '^2.0.2',
+        'tailwindcss' => '^2.2.15',
         'turbolinks' => '^5.2.0',
     ];
 
-    const DEV_NPM_PACKAGES_TO_ADD = [
+    public const DEV_NPM_PACKAGES_TO_ADD = [
         'eslint' => '^7.7.0',
         'eslint-config-airbnb' => '^18.2.0',
         'eslint-config-prettier' => '^6.11.0',
@@ -32,7 +32,7 @@ class TtallPreset extends Preset
         'laravel-mix' => '^6.0.0',
     ];
 
-    const NPM_PACKAGES_TO_REMOVE = [
+    public const NPM_PACKAGES_TO_REMOVE = [
         'axios',
         'laravel-mix',
         'lodash',
